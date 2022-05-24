@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h3>{{name}}</h3>
+    <h4>社宅基本資料</h4>
+    <ul>
+        <li>總戶數：{{households_num}}</li>
+        <li>一房型：{{one_room}}</li>
+        <li>二房型：{{two_room}}</li>
+        <li>三房型：{{three_room}}</li>
+        <li>主辦單位：{{organizer}}</li>
+    </ul>
+    <h4>區域基本資料</h4>
+    <ul>
+        <li>距大眾運輸步行 5 分鐘</li>
+        <li>距百貨公司、商圈步行 10 分鐘：</li>
+        <li>距大型開放空間 5 分鐘：</li>
+        <li>周邊平均租金價格 5,000 元</li>
+    </ul>
+    <h4>公共設施需求分析</h4>
+    <ul>
+        <li>托幼需求強度：低</li>
+        <li>托老需求強度：高</li>
+        <li>幼兒園需求強度：低</li>
+        <li>身心障礙服務需求強度：高</li>
+        <li>社會福利設施需求強度：低</li>
+        <li>青創空間需求強度：中</li>
+        <li>停車空間需求強度：低</li>
+        
+    </ul>    
+    
+{% endblock %}
+
+{% block map %}
+<iframe class="map", src="/map" width="600" height="800"></iframe>
+{% endblock %}
+
+{% block instruct %}
+<h3>評估指標說明</h3>
+      <ul>
+        <li>公式計算加權方式說明</li>
+      </ul>
+{% endblock %}
