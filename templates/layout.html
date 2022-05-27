@@ -11,7 +11,7 @@
       integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
       crossorigin="anonymous"
     />
-    <title>社宅公共設施選址評估</title>
+    <title>高雄市社宅公共設施選址評估</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link
       rel="stylesheet"
@@ -30,7 +30,7 @@
   </head>
   <body>
     <div class="container">
-      <h1 style="margin: 1.5rem auto">社宅公共設施選址評估系統</h1>
+      <h1 style="margin: 1.5rem auto">高雄市社宅公共設施選址評估系統</h1>
       <h3>使用方式</h3>
       <div class="row">
         <div class="col-md-6">
@@ -45,12 +45,12 @@
             <!-- 都計區　<select name="district" id="area_list"></select> -->
             <br />
             <br />
-            <button type="submit">分析</button>
+            <button type="submit">查詢</button>
           </form>
 		  <hr>
-		  <form action="/spatial_set">
-			<button>選配</button>
-		  </form>
+		  <!-- <form action="/spatial_set">
+			    <button>選配</button>
+		  </form> -->
           <br />
           <div class="results">
             {% block content %}
@@ -76,24 +76,26 @@
       <script type="text/javascript">
         let social_housing= [
             "請選擇社會住宅",
-           '亞灣智慧公宅',
-            '大寮社會住宅',
-            '岡山社會住宅',
-            '三民區新都段社會住宅',
-           '凱旋青樹共合宅',
-           '前金警察宿舍',
-            '鳳山共合宅',
-           '清豐安居',
-            '仁武安居',
+            '美都安居',
+            '明仁好室',
+            '崇實安居',
             '福山安居',
-           '崇實安居',
-           '明仁好室',
-            '美居安居',
-           '鳳誠安居',
-           '鳳松安居',
+            '清豐安居',
+            '鳳松安居',
+            '鳳誠安居',
             '鳳翔安居',
-           '水秀安居',
-           '山明安居'
+            '山明安居',
+            '水秀安居',
+            '仁武安居',
+            '七賢安居',
+            '大寮社會住宅',
+            '亞灣智慧公宅',
+            '岡山社會住宅',
+            '岡山社會住宅',
+            '三名區新都段社會住宅',
+            '凱旋青樹共合宅',
+            '前金警察宿舍',
+            '鳳山共合宅'
         ];
         let districtSelect = document.getElementById("social_housing_list");
         let inner = "";

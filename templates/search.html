@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h3>{{name}}</h3>
+    <h4>社宅基本資料</h4>
+    <ul>
+        <li>基地面積：</li>
+
+        <form action="/analysis">
+            <!-- 總戶數 -->
+            {% if households_num %}
+                <li>總戶數：{{households_num}} 戶</li>
+            {% else %}
+                請輸入總戶數：<input type="text" name="households_num">
+            {% endif %}
+            <!-- 一房型 -->
+            {% if one_room %}
+                <li>一房型/套房型：{{one_room}} 戶</li>
+            {% else %}
+                <li>一房型/套房型：<input type="text" name="one" placeholder="請輸入一房型戶數"> 戶</li>
+            {% endif %}
+            <!-- 二房型 -->
+            {% if two_room %}
+                <li>二房型：{{two_room}} 戶</li>
+            {% else %}
+                <li>二房型：<input type="text" name="two" placeholder="請輸入二房型戶數"> 戶</li>
+            {% endif %}
+            <!-- 三房型 -->
+            {% if two_room %}
+                <li>三房型：{{three_room}} 戶</li>
+            {% else %}
+                <li>三房型：<input type="text" name="three" placeholder="請輸入三房型戶數"> 戶</li>
+            {% endif %}
+            <!-- 計畫容納人口 -->
+            {% if housing_population %}
+                <li>計畫容納人口：{{housing_population}} 人</li>
+            {% endif %}
+            {% if organizer %}
+                <li>主辦單位：{{organizer}}</li>
+            {% endif %}
+        
+    </ul>
+    <h4>區域基本資料</h4>
+    <ul>
+        <li>距大眾運輸步行 5 分鐘</li>
+        <li>距百貨公司、商圈步行 10 分鐘：</li>
+        <li>距大型開放空間 5 分鐘：</li>
+        <li>周邊平均租金價格 5,000 元</li>
+    </ul>
+        <button>分析</button>
+    </form>
+        
+    
+{% endblock %}
+
+{% block map %}
+<h4>{{name}}</h4>
+<iframe class="map", src="/map" width="600" height="800"></iframe>
+{% endblock %}
+
+{% block instruct %}
+<h3>評估指標說明</h3>
+      <ul>
+        <li>公式計算加權方式說明</li>
+      </ul>
+{% endblock %}
